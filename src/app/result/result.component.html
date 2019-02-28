@@ -30,7 +30,7 @@
       <img src='{{ _result.image_url }} ' alt=''/>
     </div>
     <div *ngIf="_result.transactions.length > 1; else elseNope">
-      Does {{ _result.name }} deliver? <strong>Yes</strong>  
+      {{ _result.name }} delivers!
     </div>
     <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
   </div>

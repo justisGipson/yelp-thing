@@ -3,7 +3,6 @@ import { Result } from '../models/result.model';
 import { Search } from '../models/search.model';
 import { YelpService } from '../yelp.service';
 
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -19,10 +18,10 @@ export class SearchComponent {
     let searchStuff = new Search();
     searchStuff.price = price;
     searchStuff.location = location;
-
+    console.log(searchStuff)
     this.service.findFood(searchStuff).subscribe(data => {
       this.result = data.response;
-      // console.log(this.result)
+      console.log(this.result)
     })
   }
 }
