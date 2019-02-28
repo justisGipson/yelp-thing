@@ -1,3 +1,18 @@
-<p>
-  search works!
-</p>
+<div style="text-align:center">
+  <h1>FIND FOOD!</h1>
+  <div>
+    <form (submit)="onSearch(price.value, location.value); false">
+      <select placeholder="Select" name="price">
+        <option value=1>$</option>
+        <option value=2>$$</option>
+        <option value=3>$$$</option>
+        <option value=4>$$$$</option>
+      </select>
+      <input placeholder="city" name="city" >
+      <button type='submit' type='submit'>Submit</button>
+    </form>
+  </div>
+</div>
+<div *ngIf="result !== undefined ">
+  <app-search [result]="result"></app-search>
+</div>
