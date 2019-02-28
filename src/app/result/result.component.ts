@@ -10,7 +10,7 @@ export class ResultComponent{
   public _result = {};
   // constructor() { }
 
-  @Input()set result(result: any){
+  @Input() set result(result: any){
     this._result = result;
   }
   get result(): any {

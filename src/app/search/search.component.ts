@@ -20,8 +20,8 @@ export class SearchComponent {
     searchStuff.location = location;
     console.log(searchStuff)
     this.service.findFood(searchStuff).subscribe(data => {
-      this.result = data.response;
-      console.log(this.result)
+      this.result = data;
+      // console.log(this.result)
     })
   }
 }

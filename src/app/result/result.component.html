@@ -1,37 +1,35 @@
-<div if="result">
-  <div >
-    <div >
-      <h1>{{ _result.name }}</h1>
-      <p><i> {{ _result.location.display_address }} </i></p>
-      <img class="image" src="{{ restaurant.image_url }}" />
-      <p>Phone Number: {{ _result.phone }}</p>
-      <h5>Price: {{ _result.price }} </h5>
-      <!-- <p><img src="../assets/regular_0.png" *ngIf="restaurants.rating === 0">
-      </p>
-      <p><img src="../assets/regular_1.png" *ngIf="restaurants.rating === 1">
-      </p>
-      <p><img src="../assets/regular_1_half.png" *ngIf="restaurants.rating === 1.5">
-      </p>
-      <p><img src="../assets/regular_2.png" *ngIf="restaurants.rating === 2">
-      </p>
-      <p><img src="../assets/regular_2_half.png" *ngIf="restaurants.rating === 2.5">
-      </p>
-      <p><img src="../assets/regular_3.png" *ngIf="restaurants.rating === 3">
-      </p>
-      <p><img src="../assets/regular_3_half.png" *ngIf="restaurants.rating === 3.5">
-      </p>
-      <p><img src="../assets/regular_4.png" *ngIf="restaurants.rating === 4">
-      </p>
-      <p><img src="../assets/regular_4_half.png" *ngIf="restaurants.rating === 4.5">
-      </p>
-      <p><img src="../assets/regular_5.png" *ngIf="restaurants.rating === 5">
-      </p> -->
-      <br />
-      <img src='{{ _result.image_url }} ' alt=''/>
-    </div>
-    <div *ngIf="_result.transactions.length > 1; else elseNope">
-      {{ _result.name }} delivers!
-    </div>
-    <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
+<div>
+  <div>
+    <h1>{{ _result.name }}</h1>
+    <p><i> {{ _result.location.display_address }} </i></p>
+    <img class="image" src="{{ _result.image_url }}" />
+    <p>Phone Number: {{ _result.display_phone }}</p>
+    <h5>Price: {{ _result.price }} </h5>
+    <!-- <p><img src="../assets/regular_0.png" *ngIf="restaurants.rating === 0">
+    </p>
+    <p><img src="../assets/regular_1.png" *ngIf="restaurants.rating === 1">
+    </p>
+    <p><img src="../assets/regular_1_half.png" *ngIf="restaurants.rating === 1.5">
+    </p>
+    <p><img src="../assets/regular_2.png" *ngIf="restaurants.rating === 2">
+    </p>
+    <p><img src="../assets/regular_2_half.png" *ngIf="restaurants.rating === 2.5">
+    </p>
+    <p><img src="../assets/regular_3.png" *ngIf="restaurants.rating === 3">
+    </p>
+    <p><img src="../assets/regular_3_half.png" *ngIf="restaurants.rating === 3.5">
+    </p>
+    <p><img src="../assets/regular_4.png" *ngIf="restaurants.rating === 4">
+    </p>
+    <p><img src="../assets/regular_4_half.png" *ngIf="restaurants.rating === 4.5">
+    </p>
+    <p><img src="../assets/regular_5.png" *ngIf="restaurants.rating === 5">
+    </p> -->
+    <br />
+    <img src='{{ _result.image_url }} ' alt=''/>
   </div>
+  <div *ngIf="_result.transactions.length > 1; else elseNope">
+    {{ _result.name }} delivers!
+  </div>
+  <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
 </div>
