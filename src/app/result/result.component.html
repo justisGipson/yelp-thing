@@ -2,9 +2,13 @@
   <div>
     <h1>{{ _result.name }}</h1>
     <p><i> {{ _result.location.display_address }} </i></p>
-    <img class="image" src="{{ _result.image_url }}" />
+    <!-- <img class="image" src="{{ _result.image_url }}" /> -->
     <p>Phone Number: {{ _result.display_phone }}</p>
     <h5>Price: {{ _result.price }} </h5>
+    <div *ngIf="_result.transactions.length > 1; else elseNope">
+      {{ _result.name }} delivers!
+      <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
+    </div>
     <!-- <p><img src="../assets/regular_0.png" *ngIf="restaurants.rating === 0">
     </p>
     <p><img src="../assets/regular_1.png" *ngIf="restaurants.rating === 1">
@@ -28,8 +32,4 @@
     <br />
     <img src='{{ _result.image_url }} ' alt=''/>
   </div>
-  <div *ngIf="_result.transactions.length > 1; else elseNope">
-    {{ _result.name }} delivers!
-  </div>
-  <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
 </div>
