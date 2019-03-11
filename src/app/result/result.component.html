@@ -9,26 +9,26 @@
       {{ _result.name }} delivers!
       <ng-template #elseNope>{{ _result.name }} doesn't deliver. Sorry.</ng-template>
     </div>
-    <!-- <p><img src="../assets/regular_0.png" *ngIf="restaurants.rating === 0">
+    <p><img src="../assets/regular_0.png" *ngIf="_result.rating === 0">
     </p>
-    <p><img src="../assets/regular_1.png" *ngIf="restaurants.rating === 1">
+    <p><img src="../assets/regular_1.png" *ngIf="_result.rating === 1">
     </p>
-    <p><img src="../assets/regular_1_half.png" *ngIf="restaurants.rating === 1.5">
+    <p><img src="../assets/regular_1_half.png" *ngIf="_result.rating === 1.5">
     </p>
-    <p><img src="../assets/regular_2.png" *ngIf="restaurants.rating === 2">
+    <p><img src="../assets/regular_2.png" *ngIf="_result.rating === 2">
     </p>
-    <p><img src="../assets/regular_2_half.png" *ngIf="restaurants.rating === 2.5">
+    <p><img src="../assets/regular_2_half.png" *ngIf="_result.rating === 2.5">
     </p>
-    <p><img src="../assets/regular_3.png" *ngIf="restaurants.rating === 3">
+    <p><img src="../assets/regular_3.png" *ngIf="_result.rating === 3">
     </p>
-    <p><img src="../assets/regular_3_half.png" *ngIf="restaurants.rating === 3.5">
+    <p><img src="../assets/regular_3_half.png" *ngIf="_result.rating === 3.5">
     </p>
-    <p><img src="../assets/regular_4.png" *ngIf="restaurants.rating === 4">
+    <p><img src="../assets/regular_4.png" *ngIf="_result.rating === 4">
     </p>
-    <p><img src="../assets/regular_4_half.png" *ngIf="restaurants.rating === 4.5">
+    <p><img src="../assets/regular_4_half.png" *ngIf="_result.rating === 4.5">
     </p>
-    <p><img src="../assets/regular_5.png" *ngIf="restaurants.rating === 5">
-    </p> -->
+    <p><img src="../assets/regular_5.png" *ngIf="_result.rating === 5">
+    </p>
     <br />
     <img src='{{ _result.image_url }} ' alt=''/>
   </div>
